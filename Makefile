@@ -18,7 +18,7 @@ CPPFLAGS	=	-I./include -Werror -Wall -Wextra
 all: $(NAME)
 
 $(NAME):	$(OBJ)
-	g++ -o $(NAME) $(OBJ)
+	g++ -o $(NAME) $(OBJ) -ldl
 
 clean:
 	rm -f *.o
