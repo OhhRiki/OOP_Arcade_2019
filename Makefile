@@ -7,7 +7,8 @@
 
 NAME	=	arcade
 
-SRC	=	src/arcade.cpp
+SRC	=	src/arcade.cpp	\
+		src/ncurses.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
@@ -18,7 +19,7 @@ CPPFLAGS	=	-I./include -Werror -Wall -Wextra
 all: $(NAME)
 
 $(NAME):	$(OBJ)
-	g++ -o $(NAME) $(OBJ) -ldl
+	g++ -o $(NAME) $(OBJ) -ldl -lncurses
 
 clean:
 	rm -f *.o

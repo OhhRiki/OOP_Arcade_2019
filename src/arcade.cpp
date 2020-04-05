@@ -14,8 +14,10 @@ void print_usage()
 
 void check_args(std::string arg)
 {
+    libs::ScreenNC nc(20);
+
     if (arg.compare("./ncurses") == 0)
-        printf("NC\n");
+        nc.start();
     if (arg.compare("./SFML") == 0)
         printf("SFML\n");
     if (arg.compare("./") == 0)

@@ -21,16 +21,19 @@
 #include <ncurses.h>
 
 namespace libs {
-    class ncurses {
+    class ScreenNC {
         public:
-            ncurses();
-            ~ncurses();
+            ScreenNC(int);
+            ~ScreenNC();
             int start();
+            void set_button();
             void print_map();
+//            void gomme(int, int);
         protected:
             int x;
             int y;
             char *map;
+            int game;
     };
 }
 
